@@ -1,11 +1,3 @@
-//
-//  ShopTableViewCell.swift
-//  testInstaLikeApp
-//
-//  Created by 福本 on 2017/11/26.
-//  Copyright © 2017年 Fukumoto. All rights reserved.
-//
-
 import UIKit
 
 class ShopTableViewCell: UITableViewCell {
@@ -18,6 +10,9 @@ class ShopTableViewCell: UITableViewCell {
         shopCollectionView.register(nib, forCellWithReuseIdentifier: "ShopCollectionViewCell")
     }
     
+    /**
+    毎回デリゲートを更新する
+     */
     func setCollectionViewDataSourceDelegate
         <D: UICollectionViewDataSource & UICollectionViewDelegate>
         (dataSourceDelegate: D, forRow row: Int) {

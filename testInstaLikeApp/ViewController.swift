@@ -9,7 +9,8 @@ extension HomeViewController:  UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         guard let cell = cell as? ShopTableViewCell else { return }
-    cell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
+        // 毎回デリゲートを更新する
+        cell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
@@ -26,9 +27,9 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopCollectionViewCell", for: indexPath) as! ShopCollectionViewCell
         cell.title.text = "せる \(indexPath.row)"
+        
         return cell
     }
 }
@@ -38,9 +39,6 @@ class HomeViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeTableView.delegate = self
-        homeTableView.dataSource = self
-
         let nib = UINib(nibName: "ShopTableViewCell", bundle: nil)
         homeTableView.register(nib, forCellReuseIdentifier: "ShopTableViewCell")
     }
