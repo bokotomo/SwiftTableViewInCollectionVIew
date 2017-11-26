@@ -1,8 +1,0 @@
-version: "Apple Swift version 4.0.2 (swiftlang-900.0.69.2 clang-900.0.38)"
-options: "71c161b907ca5e63723aa7a1a3ab4d94"
-build_time: [1511696655, 793306000]
-inputs:
-  "/Users/fukumoto/testInstaLikeApp/testInstaLikeApp/ShopCollectionViewCell.swift": [1511695977, 0]
-  "/Users/fukumoto/testInstaLikeApp/testInstaLikeApp/ViewController.swift": [1511696655, 0]
-  "/Users/fukumoto/testInstaLikeApp/testInstaLikeApp/AppDelegate.swift": [1511692001, 0]
-  "/Users/fukumoto/testInstaLikeApp/testInstaLikeApp/ShopTableViewCell.swift": [1511696172, 0]
